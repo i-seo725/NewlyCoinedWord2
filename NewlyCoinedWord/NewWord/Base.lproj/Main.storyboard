@@ -35,11 +35,8 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title=""/>
-                                <connections>
-                                    <action selector="typeWordTextField:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gtS-4C-m8A"/>
-                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyf-Pb-3XR">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyf-Pb-3XR">
                                 <rect key="frame" x="20" y="152" width="75" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="8uF-XG-J5J"/>
@@ -48,9 +45,10 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <action selector="searchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Koc-sJ-dVr"/>
+                                    <action selector="wordExampleTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OnW-Fn-oP4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8x-Ez-dqM">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8x-Ez-dqM">
                                 <rect key="frame" x="100" y="152" width="75" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="HsP-Dq-C6v"/>
@@ -61,7 +59,7 @@
                                     <action selector="searchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u2d-Yr-C9t"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z61-fU-zTU">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z61-fU-zTU">
                                 <rect key="frame" x="180" y="152" width="75" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Fk3-XM-kdH"/>
@@ -72,7 +70,7 @@
                                     <action selector="searchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rJs-ue-xKB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ta0-7g-eio">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ta0-7g-eio">
                                 <rect key="frame" x="260" y="152" width="75" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="2xr-r0-QTQ"/>
@@ -137,10 +135,14 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="firstButton" destination="uyf-Pb-3XR" id="Bez-nm-5Zq"/>
+                        <outlet property="fourthButton" destination="Ta0-7g-eio" id="192-QP-mEt"/>
                         <outlet property="resultImageView" destination="oxz-0j-kZV" id="4um-lL-Yw8"/>
                         <outlet property="resultLabel" destination="Y2k-BS-Ui8" id="EYI-3g-qmi"/>
                         <outlet property="searchButton" destination="akX-s7-mTt" id="27G-H4-TUG"/>
                         <outlet property="searchTextField" destination="ui1-VC-7zr" id="4ZQ-Zr-M8Q"/>
+                        <outlet property="secondButton" destination="r8x-Ez-dqM" id="3Xr-0w-KkU"/>
+                        <outlet property="thirdButton" destination="Z61-fU-zTU" id="mRA-FC-oXb"/>
                         <outletCollection property="wordButtons" destination="uyf-Pb-3XR" collectionClass="NSMutableArray" id="ZGx-1B-W9S"/>
                         <outletCollection property="wordButtons" destination="r8x-Ez-dqM" collectionClass="NSMutableArray" id="Hw5-Jc-2QS"/>
                         <outletCollection property="wordButtons" destination="Z61-fU-zTU" collectionClass="NSMutableArray" id="xZB-kI-QIm"/>
