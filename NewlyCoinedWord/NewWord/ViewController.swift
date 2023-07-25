@@ -103,7 +103,7 @@ class ViewController: UIViewController {
         resultImageView.image = UIImage(named: "background")
             for i in newWord.keys {
                 if searchTextField.text! == i {
-                    resultLabel.text = "\"\(i)\"의 뜻은 \n\"\(newWord[i] ?? "오류")\"입니다."
+                    resultLabel.text = "\"\(i)\"의 뜻은 \n\"\(newWord[i]!)\"입니다."
                     break
                 } else {
                     resultLabel.text = "입력하신 단어는 \n 사전에 존재하지 않습니다."
@@ -128,6 +128,8 @@ class ViewController: UIViewController {
                     resultLabel.text = "입력하신 단어는 \n 사전에 존재하지 않습니다."
                 }
             }
+            
+            
         } else {
         makeAlert()
             return
